@@ -6,6 +6,7 @@ $pink: #F38989
     font-family: 'Playfair Display', serif , '微軟正黑體'
     color: $black
     // border: solid 1px $black
+    // box-sizing: border-box
 
 html,body
     margin: 0
@@ -52,6 +53,7 @@ nav
             padding: 15px
             font-size: 18px
             font-weight: 500
+            letter-spacing: 1px
             transition-duration: .5s
             &:hover
                 color: $pink
@@ -72,7 +74,7 @@ nav
         .logo
             width: 40px
         .menu
-            display: none
+            display: block
             position: fixed
             width: 100%
             height: fit-content
@@ -80,10 +82,13 @@ nav
             left: 0
             padding: 50px 0 30px 0
             background-color: rgba(255, 255, 255, .8)  
-            box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0)
             text-align: center
+            transform: translateY(-245px)
+            transition-duration: .5s
             &.show
-                display: block  
+                transform: translateY(0px)
+                box-shadow: 0 0 10px rgba(0, 0, 0, .3)
         .burger
             display: inline-block
             position: absolute
@@ -92,11 +97,26 @@ nav
             transform: translateY(-50%)
             cursor: pointer
             .line
+                position: relative
                 width: 30px
                 height: 3px
                 background-color: $black
                 border-radius: 50px
                 margin: 5px 0
+                transition-duration: .5s
+            .line:nth-child(1)
+                // transform-origin: top left
+            .line:nth-child(3)
+                // transform-origin: bottom left
+        .burger.open
+            .line:nth-child(1)
+                // width: 35px
+                transform: rotate(45deg) translate(7px,5px)
+            .line:nth-child(2)
+                opacity: 0
+            .line:nth-child(3)
+                // width: 35px
+                transform: rotate(-45deg) translate(6px,-5px)
 
 header
     position: relative
@@ -222,6 +242,7 @@ section
             align-items: center
         .deco
             width: 100%
+            height: 540px
             .photo
                 left: 20%
                 width: 85%
@@ -229,7 +250,7 @@ section
             .name
                 left: 20%
         .text_area
-            margin: 70px 0
+            margin: 50px 0
         .intro
             margin: 35px 0
 
