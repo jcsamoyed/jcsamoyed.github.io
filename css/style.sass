@@ -6,7 +6,7 @@ $pink: #F38989
     font-family: 'Playfair Display', serif , '微軟正黑體'
     color: $black
     // border: solid 1px $black
-    // box-sizing: border-box
+    box-sizing: border-box
 
 html,body
     margin: 0
@@ -20,6 +20,7 @@ body
     background-attachment: fixed
     overflow-x: hidden
 
+//--導覽列開始
 nav
     position: fixed
     z-index: 3
@@ -149,20 +150,32 @@ header
             right: 35px
             top: -5px
 section
+    position: relative
+    margin: 100px auto
     .title
         text-align: right
-        font-size: 200px
+        font-size: 160px
+        line-height: 1
         opacity: .1
-        position: relative
-        top: 124px
+        position: absolute
+        top: -100px
+        right: 0
         z-index: -1
+        margin: 0
         overflow: hidden
     .container
+        position: relative
         width: 80%
         max-width: 1064px
         margin: 0 auto
+
+@media screen and(max-width: 960px)
+    header
+        .slogan
+            display: none
+
+//--ABOUT區塊開始
 #about
-    margin: 0 auto 100px
     .container
         display: flex
         flex-flow: row nowrap
@@ -254,7 +267,90 @@ section
         .intro
             margin: 35px 0
 
+//--EXPERIENCE區塊開始
+#experience
+    .title
+        span
+            display: block
+            margin-right: 400px
+    .timeline
+        position: relative
+        left: 25%
+    .event
+        position: relative
+        border-left: solid 1px #707070
+        padding-left: 75px
+        padding-bottom: 30px
+        width: 75%
+        max-width: 700px
+    .event:last-child
+        border: none
+    .time
+        position: absolute
+        left: 0
+        top: 0
+        transform: translateX(-50%)
+        box-sizing: border-box
+        width: 15px
+        height: 15px
+        background-color: $black
+        border-radius: 50%
+        border: solid 3px #707070
+        // &::before
+        //     font-family: '微軟正黑體'
+        //     content: attr(date)
+        //     font-size: 13px
+        //     letter-spacing: 1px
+        //     line-height: 0.8
+        //     position: absolute
+        //     right: 35px
+        //     top: 0
+        //     width: max-content
+    .date
+        font-family: '微軟正黑體'
+        position: absolute
+        width: 120px
+        left: -160px
+        top: 0
+        text-align: right
+        font-size: 13px
+        letter-spacing: 1px
+        line-height: 1
+    .event_title
+        font-family: '微軟正黑體'
+        font-size: 15px
+        font-weight: bold
+        line-height: 1
+        margin-bottom: 15px
+    .event_description
+        font-family: '微軟正黑體'
+        font-size: 14px
+        line-height: 1.8
+        margin: 0
+
+@media screen and(max-width: 1280px)
+    #experience
+        .timeline
+            left: 40%
 @media screen and(max-width: 960px)
-    header
-        .slogan
-            display: none
+    #experience
+        .timeline
+            left: 15%
+        .event
+            padding-left: 10%
+            width: 90%
+        .event_title
+            margin-bottom: 5px
+        .date
+            position: initial
+            text-align-last: left
+            margin: 5px 0 15px 0
+            color: $pink
+            font-size: 12px
+            font-weight: bold
+@media screen and(max-width: 525px)
+    #experience
+        .timeline
+            left: initial
+        .event_title
+            line-height: 1.5
