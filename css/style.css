@@ -236,6 +236,15 @@ section .container {
   header .slogan {
     display: none;
   }
+  section .title {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  section .title {
+    font-size: 60px;
+  }
 }
 
 #about .container {
@@ -379,6 +388,10 @@ section .container {
   margin-right: 400px;
 }
 
+#experience .container {
+  padding: 150px 0;
+}
+
 #experience .timeline {
   position: relative;
   left: 25%;
@@ -446,6 +459,12 @@ section .container {
 }
 
 @media screen and (max-width: 960px) {
+  #experience .title span {
+    margin-right: 200px;
+  }
+  #experience .container {
+    padding: 100px 0;
+  }
   #experience .timeline {
     left: 15%;
   }
@@ -467,11 +486,84 @@ section .container {
 }
 
 @media screen and (max-width: 525px) {
+  #experience .title span {
+    margin-right: 120px;
+  }
+  #experience .container {
+    padding: 50px 0;
+  }
   #experience .timeline {
     left: initial;
   }
   #experience .event_title {
     line-height: 1.5;
   }
+}
+
+#works .collection {
+  font-size: 0;
+}
+
+#works .work_block {
+  display: inline-block;
+  position: relative;
+  width: calc( 33.33% - 20px);
+  margin: 10px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-box-shadow .4s ease-in-out;
+  transition: -webkit-box-shadow .4s ease-in-out;
+  transition: box-shadow .4s ease-in-out;
+  transition: box-shadow .4s ease-in-out, -webkit-box-shadow .4s ease-in-out;
+}
+
+#works .work_block img {
+  width: 100%;
+}
+
+#works .work_block:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#works .cover {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(32, 32, 32, 0.9);
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+
+#works .cover:hover {
+  opacity: 1;
+}
+
+#works .work_title {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#works .work_description {
+  color: white;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

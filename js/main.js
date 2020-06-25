@@ -1,3 +1,9 @@
+$(document).ready(function () {
+    var work_w = $(".work_block").width();
+    $(".work_block").css("height", work_w)
+    // console.log(work_w);
+});
+
 $(window).resize(function () {
     if ($(window).width() < 650) {
         var deco_w1 = $(".deco").width() + 30;
@@ -8,4 +14,6 @@ $(window).resize(function () {
         $(".deco").css("height", deco_w2);
     };
     // console.log(deco_w);
+    var work_w = $(".work_block").width();
+    $(".work_block").css("height", work_w)
 });

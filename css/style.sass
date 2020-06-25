@@ -173,6 +173,13 @@ section
     header
         .slogan
             display: none
+    section
+        .title
+            font-size: 100px
+@media screen and(max-width: 525px)
+    section
+        .title
+            font-size: 60px
 
 //--ABOUT區塊開始
 #about
@@ -273,6 +280,8 @@ section
         span
             display: block
             margin-right: 400px
+    .container
+        padding: 150px 0
     .timeline
         position: relative
         left: 25%
@@ -296,16 +305,6 @@ section
         background-color: $black
         border-radius: 50%
         border: solid 3px #707070
-        // &::before
-        //     font-family: '微軟正黑體'
-        //     content: attr(date)
-        //     font-size: 13px
-        //     letter-spacing: 1px
-        //     line-height: 0.8
-        //     position: absolute
-        //     right: 35px
-        //     top: 0
-        //     width: max-content
     .date
         font-family: '微軟正黑體'
         position: absolute
@@ -334,6 +333,11 @@ section
             left: 40%
 @media screen and(max-width: 960px)
     #experience
+        .title
+            span
+                margin-right: 200px
+        .container
+            padding: 100px 0
         .timeline
             left: 15%
         .event
@@ -350,7 +354,54 @@ section
             font-weight: bold
 @media screen and(max-width: 525px)
     #experience
+        .title
+            span
+                margin-right: 120px
+        .container
+            padding: 50px 0
         .timeline
             left: initial
         .event_title
             line-height: 1.5
+            
+//--WORKS區塊開始
+#works
+    .collection
+        font-size: 0
+    .work_block
+        display: inline-block
+        position: relative
+        width: calc( 33.33% - 20px )
+        margin: 10px
+        box-shadow: 0 0 15px rgba(0, 0, 0, .3)
+        transition: box-shadow .4s ease-in-out
+        img
+            width: 100%
+        &:hover
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .5)
+    .cover
+        position: absolute
+        display: flex
+        flex-direction: column
+        justify-content: center
+        top: 0
+        width: 100%
+        height: 100%
+        padding: 10px
+        background-color: rgba(32,32,32,.9)
+        text-align: center
+        letter-spacing: 1px
+        cursor: pointer
+        opacity: 0
+        transition-duration: .4s
+        &:hover
+            opacity: 1
+            
+    .work_title
+        color: white
+        font-size: 16px
+        font-weight: bold
+        margin-bottom: 15px
+    .work_description
+        color: white
+        font-size: 14px
