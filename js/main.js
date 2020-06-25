@@ -1,7 +1,16 @@
 $(document).ready(function () {
+    //--work_block初始高度
     var work_w = $(".work_block").width();
     $(".work_block").css("height", work_w)
     // console.log(work_w);
+
+    //--overlay展開收合
+    $('.work_block').click(function () {
+        $('.overlay').fadeIn(200);
+    });
+    $('.close').click(function () {
+        $('.overlay').fadeOut(200);
+    });
 });
 
 $(window).resize(function () {

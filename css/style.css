@@ -519,6 +519,9 @@ section .container {
 
 #works .work_block img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #works .work_block:hover {
@@ -556,6 +559,7 @@ section .container {
 }
 
 #works .work_title {
+  font-family: '微軟正黑體';
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -563,7 +567,46 @@ section .container {
 }
 
 #works .work_description {
+  font-family: '微軟正黑體';
   color: white;
   font-size: 14px;
+}
+
+#works .overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+}
+
+#works .modal {
+  max-width: 600px;
+  width: 80%;
+  position: relative;
+  background: #fff;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#works .modal img {
+  width: 100%;
+}
+
+#works .close {
+  font-family: '微軟正黑體';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

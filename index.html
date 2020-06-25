@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -125,17 +128,25 @@
         <div class="container">
             <div class="collection">
                 <div class="work_block">
-                    <img src="img/pic-1.jpg" alt="pic-1">
+                    <a href="https://phoenixkid.com/" target="_blank">
+                        <img src="img/pic-1.jpg" alt="pic-1">
+                        <div class="cover">
+                            <div class="work_title">鳳林習學官網</div>
+                            <div class="work_description">負責網站視覺設計及前端切版</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work_block">
+                    <img src="img/pic-2.jpg" alt="pic-2">
                     <div class="cover">
-                        <div class="work_title">鳳林習學官網</div>
+                        <div class="work_title">mamalove促銷DM</div>
                         <div class="work_description">負責網站視覺設計及前端切版</div>
                     </div>
                 </div>
-                <div class="work_block">
-                    <img src="img/pic-1.jpg" alt="pic-1">
-                    <div class="cover">
-                        <div class="work_title">鳳林習學官網</div>
-                        <div class="work_description">負責網站視覺設計及前端切版</div>
+                <div class="overlay">
+                    <div class="modal">
+                        <img src="img/pic-2.jpg" alt="pic-2">
+                        <div class="close">x</div>
                     </div>
                 </div>
                 <div class="work_block">
@@ -150,7 +161,6 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="js/nav.js"></script>
     <script src="js/main.js"></script>
 </body>
