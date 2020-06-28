@@ -6,10 +6,16 @@ $(document).ready(function () {
 
     //--overlay展開收合
     $('.work_block').click(function () {
-        $('.overlay').fadeIn(200);
+        $(this).next().fadeIn(200);
     });
     $('.close').click(function () {
         $('.overlay').fadeOut(200);
+    });
+    $(document).mouseup(function (e) {
+        var _con = $('.modal'); // 设置目标区域
+        if (!_con.is(e.target) && _con.has(e.target).length == 0) {
+            $('.overlay').fadeOut(200);
+        }
     });
 });
 
