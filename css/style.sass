@@ -375,12 +375,19 @@ section
         margin: 10px
         box-shadow: 0 0 15px rgba(0, 0, 0, .3)
         transition: box-shadow .4s ease-in-out
+        overflow: hidden
+        cursor: pointer
         img
             width: 100%
             height: 100%
             object-fit: cover
+            transition-duration: .4s
         &:hover
             box-shadow: 0 5px 10px rgba(0, 0, 0, .5)
+            img
+                width: 110%
+                height: 110%
+                transform: translateX(-5%) translateY(-5%)
     .cover
         position: absolute
         display: flex
@@ -390,10 +397,9 @@ section
         width: 100%
         height: 100%
         padding: 10px
-        background-color: rgba(32,32,32,.9)
+        background-color: rgba(32,32,32,.8)
         text-align: center
         letter-spacing: 1px
-        cursor: pointer
         opacity: 0
         transition-duration: .4s
         &:hover
@@ -420,8 +426,8 @@ section
         background: rgba(0,0,0,0.8)
         z-index: 5
     .modal
-        max-width: 600px
-        width: 80%
+        max-width: 1000px
+        width: 85%
         position: relative
         background: #fff
         margin: 0 auto
@@ -437,3 +443,8 @@ section
         cursor: pointer
         font-size: 20px
         color: white
+        text-shadow: 0 0 10px rgba(0, 0, 0, .9)
+        opacity: .5
+        transition-duration: .2s
+        &:hover
+            opacity: 1
