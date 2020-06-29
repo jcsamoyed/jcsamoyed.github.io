@@ -331,6 +331,7 @@ section
     #experience
         .timeline
             left: 40%
+            max-width: 400px
 @media screen and(max-width: 960px)
     #experience
         .title
@@ -448,3 +449,12 @@ section
         transition-duration: .2s
         &:hover
             opacity: 1
+
+@media screen and(max-width: 1024px)
+    #works
+        .work_block
+            width: calc( 50% - 20px )
+@media screen and(max-width: 425px)
+    #works
+        .work_block
+            width: calc( 100% - 20px )

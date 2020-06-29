@@ -455,6 +455,7 @@ section .container {
 @media screen and (max-width: 1280px) {
   #experience .timeline {
     left: 40%;
+    max-width: 400px;
   }
 }
 
@@ -626,5 +627,17 @@ section .container {
 
 #works .close:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  #works .work_block {
+    width: calc( 50% - 20px);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #works .work_block {
+    width: calc( 100% - 20px);
+  }
 }
 /*# sourceMappingURL=style.css.map */
