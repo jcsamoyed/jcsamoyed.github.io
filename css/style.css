@@ -199,7 +199,7 @@ header .slogan {
 header .slogan::before {
   content: '';
   display: inline-block;
-  width: 60vh;
+  width: calc( 90vh - 280px);
   height: 1px;
   background-color: #8a8a8a;
   position: relative;
@@ -232,10 +232,13 @@ section .container {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   header .slogan {
     display: none;
   }
+}
+
+@media screen and (max-width: 960px) {
   section .title {
     font-size: 100px;
   }
@@ -672,5 +675,20 @@ section .container {
   #works .work_block {
     width: calc( 100% - 20px);
   }
+}
+
+footer .container {
+  position: relative;
+  width: 80%;
+  max-width: 1064px;
+  margin: 0 auto;
+}
+
+footer .copyright {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 30px auto;
 }
 /*# sourceMappingURL=style.css.map */
