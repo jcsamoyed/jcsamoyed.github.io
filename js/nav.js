@@ -8,3 +8,11 @@ $(".burger").click(
         $(".burger").toggleClass('open');
     }
 );
+
+$(".menu").on('click', 'a', function (evt) {
+    evt.preventDefault();
+    var target = $(this).attr("href");
+    $("html,body").animate({
+        scrollTop: $(target).offset().top - 150
+    }, 800, 'swing');
+});
