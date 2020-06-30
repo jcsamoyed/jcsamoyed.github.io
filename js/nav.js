@@ -14,5 +14,5 @@ $(".menu").on('click', 'a', function (evt) {
     var target = $(this).attr("href");
     $("html,body").animate({
         scrollTop: $(target).offset().top - 150
-    }, 800, 'swing');
+    }, 1000, 'easeInOutQuint');
 });
