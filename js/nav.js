@@ -1,6 +1,4 @@
-window.onload = function () {
-    var s = skrollr.init();
-}
+var s = skrollr.init();
 
 $(".burger").click(
     function () {
