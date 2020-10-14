@@ -46,11 +46,18 @@ nav .logo {
   position: relative;
   display: inline-block;
   z-index: 3;
+  opacity: 0;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
 }
 
 nav .logo img {
   width: 100%;
   vertical-align: middle;
+}
+
+nav .logo.fixed {
+  opacity: 1;
 }
 
 nav .burger {
@@ -392,7 +399,7 @@ section .container {
 }
 
 #experience .container {
-  padding: 150px 0;
+  padding: 60px 0 150px;
 }
 
 #experience .timeline {

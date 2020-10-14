@@ -1,4 +1,12 @@
-var s = skrollr.init();
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+            $('.logo').addClass('fixed');
+        } else {
+            $('.logo').removeClass('fixed');
+        }
+    });
+});
 
 $(".burger").click(
     function () {

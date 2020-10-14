@@ -34,9 +34,13 @@ nav
         position: relative
         display: inline-block
         z-index: 3
+        opacity: 0
+        transition-duration: .3s
         img
             width: 100%
             vertical-align: middle
+        &.fixed
+            opacity: 1
     .burger
         display: none
         z-index: 4
@@ -47,8 +51,8 @@ nav
         margin: 0
         padding: 0
     li
-        list-style: none       
-        a   
+        list-style: none
+        a
             display: block
             text-decoration: none
             padding: 15px
@@ -58,7 +62,7 @@ nav
             transition-duration: .5s
             &:hover
                 color: $pink
-            
+
 @media screen and(max-width: 1024px)
     nav
         width: 100%
@@ -70,8 +74,8 @@ nav
             width: 90%
             height: initial
             margin: 1280px
-            margin: 0 auto           
-            padding: 15px 0    
+            margin: 0 auto
+            padding: 15px 0
         .logo
             width: 40px
         .menu
@@ -82,7 +86,7 @@ nav
             top: 0
             left: 0
             padding: 50px 0 30px 0
-            background-color: rgba(255, 255, 255, .8)  
+            background-color: rgba(255, 255, 255, .8)
             box-shadow: 0 0 10px rgba(0, 0, 0, 0)
             text-align: center
             transform: translateY(-245px)
@@ -134,7 +138,7 @@ header
         top: 60px
         right: 45px
         transform-origin: top right
-        transform: rotate(-90deg) 
+        transform: rotate(-90deg)
         font-size: 20px
         letter-spacing: 1px
         text-align: right
@@ -172,7 +176,7 @@ section
 @media screen and(max-width: 1024px)
     header
         .slogan
-            display: none    
+            display: none
 @media screen and(max-width: 960px)
     section
         .title
@@ -225,7 +229,7 @@ section
     .info_box
         margin-left: -6px
         .info
-            margin: 5px 0            
+            margin: 5px 0
         img
             vertical-align: middle
         .text
@@ -282,7 +286,7 @@ section
             display: block
             margin-right: 400px
     .container
-        padding: 150px 0
+        padding: 60px 0 150px
     .timeline
         position: relative
         left: 25%
@@ -365,7 +369,7 @@ section
             left: initial
         .event_title
             line-height: 1.5
-            
+
 //--WORKS區塊開始
 #works
     .collection
