@@ -1,3 +1,5 @@
+new WOW().init();
+
 $(document).ready(function () {
     //--work_block初始高度
     var work_w = $(".work_block").width();
